@@ -1,0 +1,64 @@
+body {
+  letter-spacing: $font-size-base-letter-spacing;
+}
+
+input {
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.cp {
+  cursor: pointer;
+}
+
+:root {
+  --level-1-bg: #{$level1Bg};
+  --level-1-color: #{$level1Color};
+
+  --level-2-bg: #{$level2Bg};
+  --level-2-color: #{$level2Color};
+
+  --level-3-bg: #{$level3Bg};
+  --level-3-color: #{$level3Color};
+
+  --level-4-bg: #{$level4Bg};
+  --level-4-color: #{$level4Color};
+
+  --level-5-bg: #{$level5Bg};
+  --level-5-color: #{$level5Color};
+
+  --level-6-bg: #{$level6Bg};
+  --level-6-color: #{$level6Color};
+}
+
+[data-bs-theme="dark"] {
+  --level-1-bg: #{$level1DarkBg};
+  --level-1-color: #{$level1DarkColor};
+
+  --level-2-bg: #{$level2DarkBg};
+  --level-2-color: #{$level2DarkColor};
+
+  --level-3-bg: #{$level3DarkBg};
+  --level-3-color: #{$level3DarkColor};
+
+  --level-4-bg: #{$level4DarkBg};
+  --level-4-color: #{$level4DarkColor};
+
+  --level-5-bg: #{$level5DarkBg};
+  --level-5-color: #{$level5DarkColor};
+
+  --level-6-bg: #{$level6DarkBg};
+  --level-6-color: #{$level6DarkColor};
+}

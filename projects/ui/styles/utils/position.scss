@@ -1,0 +1,100 @@
+$utilities: map-merge($utilities, (
+  "position": (
+    property: position,
+    class: "p",
+    responsive: true,
+    values: (
+      "r": relative,
+      "a": absolute,
+      "st": static,
+      "f": fixed,
+      "sk": sticky,
+      "u": unset,
+      "i": initial
+    )
+  )
+));
+
+/* PIXELS */
+$utilities: map-merge($utilities, (
+  "position-top-px": (
+    property: top,
+    class: "t",
+    responsive: true,
+    values: $air-utility-position-pixels
+  ),
+  "position-right-px": (
+    property: right,
+    class: "r",
+    responsive: true,
+    values: $air-utility-position-pixels
+  ),
+  "position-bottom-px": (
+    property: bottom,
+    class: "b",
+    responsive: true,
+    values: $air-utility-position-pixels
+  ),
+  "position-left-px": (
+    property: left,
+    class: "l",
+    responsive: true,
+    values: $air-utility-position-pixels
+  )
+));
+
+/* PERCENTS */
+$utilities: map-merge($utilities, (
+  "position-top-percents": (
+    property: top,
+    class: "t-pr",
+    responsive: true,
+    values: $air-utility-position-percents
+  ),
+  "position-right-percents": (
+    property: right,
+    class: "r-pr",
+    responsive: true,
+    values: $air-utility-position-percents
+  ),
+  "position-bottom-percents": (
+    property: bottom,
+    class: "b-pr",
+    responsive: true,
+    values: $air-utility-position-percents
+  ),
+  "position-left-percents": (
+    property: left,
+    class: "l-pr",
+    responsive: true,
+    values: $air-utility-position-percents
+  )
+));
+
+/** UNSET */
+$utilities: map-merge($utilities, (
+  "position-top-unset": (
+    property: top,
+    class: "t",
+    responsive: true,
+    values: unset
+  ),
+  "position-right-unset": (
+    property: right,
+    class: "r",
+    responsive: true,
+    values: unset
+  ),
+  "position-bottom-unset": (
+    property: bottom,
+    class: "b",
+    responsive: true,
+    values: unset
+  ),
+  "position-left-unset": (
+    property: left,
+    class: "l",
+    responsive: true,
+    values: unset
+  )
+));

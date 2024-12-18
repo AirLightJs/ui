@@ -1,0 +1,47 @@
+$utilities: map-merge($utilities, (
+  "height-pixels": (
+    property: height,
+    class: h,
+    responsive: true,
+    values: $air-sizing-pixels
+  ),
+  "height-percentage": (
+    property: height,
+    class: h-pr,
+    responsive: true,
+    values: $air-sizing-percents
+  ),
+  "min-height": (
+    property: min-height,
+    class: mn-h,
+    responsive: true,
+    values: $air-sizing-pixels
+  ),
+  "height-viewport": (
+    property: height,
+    class: hv,
+    responsive: true,
+    values: $air-sizing-viewports
+  ),
+  "height-device-viewport": (
+    property: height,
+    class: hdv,
+    responsive: true,
+    values: $air-sizing-device-viewports
+  ),
+  "max-height": (
+    property: max-height,
+    class: mx-h,
+    responsive: true,
+    values: $air-sizing-pixels
+  ),
+  "height-quick": (
+    property: height,
+    class: h,
+    responsive: true,
+    values: (
+      "a": auto,
+      "f": 100%
+    )
+  )
+));

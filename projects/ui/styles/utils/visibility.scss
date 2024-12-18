@@ -1,0 +1,12 @@
+$utilities: map-merge($utilities, (
+  "visibility": (
+    property: visibility,
+    class: v,
+    responsive: true,
+    state: hover,
+    values: (
+      h: hidden,
+      v: visible,
+    )
+  ),
+));

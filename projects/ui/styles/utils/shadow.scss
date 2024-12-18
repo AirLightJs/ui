@@ -1,0 +1,36 @@
+:root {
+  --shadow-soft-blur: $air-utility-shadow-soft-blur;
+  --shadow-soft-spread: $air-utility-shadow-soft-spread;
+  --shadow-soft-color: $air-utility-shadow-soft-color;
+
+  --shadow-medium-blur: $air-utility-shadow-medium-blur;
+  --shadow-medium-spread: $air-utility-shadow-medium-spread;
+  --shadow-medium-color: $air-utility-shadow-medium-color;
+
+  --shadow-hard-blur: $air-utility-shadow-hard-blur;
+  --shadow-hard-spread: $air-utility-shadow-hard-spread;
+  --shadow-hard-color: $air-utility-shadow-hard-color;
+}
+
+[data-bs-theme="dark"] {
+  --shadow-soft-blur: $air-utility-shadow-soft-blur-dark;
+  --shadow-soft-spread: $air-utility-shadow-soft-spread-dark;
+  --shadow-soft-color: $air-utility-shadow-soft-color-dark;
+
+  --shadow-medium-blur: $air-utility-shadow-medium-blur-dark;
+  --shadow-medium-spread: $air-utility-shadow-medium-spread-dark;
+  --shadow-medium-color: $air-utility-shadow-medium-color-dark;
+
+  --shadow-hard-blur: $air-utility-shadow-hard-blur-dark;
+  --shadow-hard-spread: $air-utility-shadow-hard-spread-dark;
+  --shadow-hard-color: $air-utility-shadow-hard-color-dark;
+}
+
+$utilities: map-merge($utilities, (
+  "box-shadow": (
+    property: box-shadow,
+    class: sd,
+    state: hover,
+    values: $air-utility-shadows
+  )
+));

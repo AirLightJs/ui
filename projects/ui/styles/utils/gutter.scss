@@ -1,0 +1,41 @@
+@each $class, $value in $air-sizing-gaps {
+  .gt-#{$class} {
+    --bs-gutter-x: #{$value} !important;
+    --bs-gutter-y: #{$value} !important;
+  }
+}
+
+@each $class, $value in $air-sizing-gaps {
+  .gtx-#{$class} {
+    --bs-gutter-x: #{$value} !important;
+  }
+}
+
+@each $class, $value in $air-sizing-gaps {
+  .gty-#{$class} {
+    --bs-gutter-y: #{$value} !important;
+  }
+}
+
+@each $screenName, $screenValue in $container-max-widths {
+  @media (min-width: $screenValue) {
+    @each $class, $value in $air-sizing-gaps {
+      .gt-#{$screenName}-#{$class} {
+        --bs-gutter-x: #{$value} !important;
+        --bs-gutter-y: #{$value} !important;
+      }
+    }
+
+    @each $class, $value in $air-sizing-gaps {
+      .gtx-#{$screenName}-#{$class} {
+        --bs-gutter-x: #{$value} !important;
+      }
+    }
+
+    @each $class, $value in $air-sizing-gaps {
+      .gty-#{$screenName}-#{$class} {
+        --bs-gutter-y: #{$value} !important;
+      }
+    }
+  }
+}

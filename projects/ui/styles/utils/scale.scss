@@ -1,0 +1,9 @@
+$utilities: map-merge($utilities, (
+  "scale": (
+    property: transform,
+    class: scl,
+    responsive: true,
+    state: hover,
+    values: $air-utility-scales,
+  )
+));

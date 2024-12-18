@@ -1,0 +1,8 @@
+$utilities: map-merge($utilities, (
+  "z-index": (
+    property: z-index,
+    class: z,
+    responsive: false,
+    values: $air-utility-z-indexes
+  )
+));

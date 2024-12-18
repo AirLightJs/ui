@@ -1,0 +1,64 @@
+@import "./components/fa/fa";
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+@import "./vars/general";
+@import "./vars/utilities";
+@import "./vars/colors";
+@import "./vars/sizing";
+
+@import "./components/general";
+@import "./components/scroll";
+@import "./components/bg-image";
+@import "./components/card";
+@import "./components/container";
+
+@import "./remove-utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/placeholders";
+
+@import "./utils/border";
+@import "./utils/blur";
+@import "./utils/scale";
+@import "./utils/zoom";
+@import "./utils/position";
+@import "./utils/font";
+@import "./utils/width";
+@import "./utils/height";
+@import "./utils/margin";
+@import "./utils/padding";
+@import "./utils/flex";
+@import "./utils/display";
+@import "./utils/gap";
+@import "./utils/gutter";
+@import "./utils/rotate";
+@import "./utils/shadow";
+@import "./utils/ar";
+@import "./utils/animation";
+@import "./utils/bg-color";
+@import "./utils/opacity";
+@import "./utils/reset";
+@import "./utils/z-index";
+@import "./utils/theme-visibility";
+@import "./utils/text";
+@import "./utils/object-fit";
+@import "./utils/user-interactions";
+@import "./utils/visibility";
+@import "./utils/overflow";
+
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";

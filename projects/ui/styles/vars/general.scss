@@ -1,0 +1,22 @@
+$enable-important-utilities: false !default;
+$enable-button-pointers: true !default;
+$min-contrast-ratio: 2.5 !default;
+$font-size-base: 0.9rem !default;
+$font-size-base-letter-spacing: -0.022em;
+$font-family-sans-serif: "Arial", sans-serif !default;
+$link-decoration: none;
+$grid-columns: 12 !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 960px,
+  lg: 1100px,
+  xl: 1200px,
+  xxl: 1440px,
+) !default;
+
+$air-scroll-width: 5px;
+$air-scroll-height: 5px;
+$air-scroll-border-radius: 5px;
+$air-scroll-color: var(--bs-tertiary-color);
+$air-scroll-color-hover: var(--bs-secondary-color);

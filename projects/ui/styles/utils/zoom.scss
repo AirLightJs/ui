@@ -1,0 +1,9 @@
+$utilities: map-merge($utilities, (
+  "zoom": (
+    property: zoom,
+    class: zm,
+    responsive: true,
+    state: hover,
+    values: $air-utility-zooms,
+  )
+));

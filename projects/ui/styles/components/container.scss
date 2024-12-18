@@ -1,0 +1,27 @@
+.cs {
+  background-color: $air-utility-sc-bg-color;
+  color: $air-utility-sc-color;
+}
+
+@each $name, $colors in $special-colors {
+  .cs-#{$name} {
+    background-color: map-get($colors, 'bg');
+    color: map-get($colors, 'color');
+  }
+
+  .cs-#{$name}-hover {
+    background-color: map-get($colors, 'bg');
+    color: map-get($colors, 'color');
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .cs-#{$color} {
+    color: color-contrast($value) if($enable-important-utilities, !important, null);
+    background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+  }
+  .cs-#{$color}-hover:hover {
+    color: color-contrast($value) if($enable-important-utilities, !important, null);
+    background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+  }
+}

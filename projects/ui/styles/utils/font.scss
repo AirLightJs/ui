@@ -1,0 +1,34 @@
+[class*="lm-"] {
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+}
+
+$utilities: map-merge($utilities, (
+  "font-size": (
+    property: font-size,
+    class: fs,
+    responsive: true,
+    values: $air-utility-font-sizes
+  ),
+  "letter-spacing": (
+    property: letter-spacing,
+    class: ls,
+    values: $air-utility-font-letter-spacings
+  ),
+  "font-weight": (
+    property: font-weight,
+    class: fw,
+    values: $air-utility-font-weights
+  ),
+  "line-height": (
+    property: line-height,
+    class: lh,
+    values: $air-utility-font-line-heights
+  ),
+  "max-lines": (
+    property: line-clamp -webkit-line-clamp,
+    class: lm,
+    values: $air-utility-font-max-lines,
+  ),
+));

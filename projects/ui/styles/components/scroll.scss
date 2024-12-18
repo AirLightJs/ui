@@ -1,0 +1,22 @@
+/* width */
+::-webkit-scrollbar {
+  width: $air-scroll-width;
+  height: $air-scroll-height;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: $air-scroll-color;
+  transition: all 0.2s ease-in-out;
+  border-radius: $air-scroll-border-radius;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: $air-scroll-color-hover;
+}

@@ -1,0 +1,16 @@
+$utilities: map-merge($utilities, (
+  "filter-blur": (
+    property: filter,
+    class: blur,
+    responsive: false,
+    state: hover,
+    values: $air-utility-blurs
+  ),
+  "backdrop-filter": (
+    property: backdrop-filter,
+    class: bg-blur,
+    responsive: false,
+    state: hover,
+    values: $air-utility-blurs
+  ),
+));

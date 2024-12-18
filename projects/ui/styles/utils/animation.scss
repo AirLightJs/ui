@@ -1,0 +1,7 @@
+$utilities: map-merge($utilities, (
+  "animation": (
+    property: transition,
+    class: an,
+    values: $air-utility-animations
+  )
+));
