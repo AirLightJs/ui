@@ -1,15 +1,18 @@
 import { Directive, ElementRef, Input, OnInit } from "@angular/core";
 import { AirFaType } from "./fa-type.type";
-import { AirFaIcon } from "./fa-icon.type";
+import { AirFaIconType } from "./fa-icon.type";
+import { AirFaAnimation } from "./fa-animation.type";
+import { AirFaAnimations, AirFaTypes } from "./fa.helper";
+import { extractValue } from "../../helpers/extract.helper";
 
 @Directive({
   selector: "[fa]",
 })
 export class AirFaDirective implements OnInit {
-  @Input("fa") icon: AirFaIcon;
-  @Input("type") type: AirFaType;
+  @Input("fa") icon: AirFaIconType;
 
-  @Input() solid: unknown = true;
+  @Input() type: AirFaType;
+  @Input() solid: unknown;
   @Input() regular: unknown;
   @Input() light: unknown;
   @Input() thin: unknown;
@@ -20,36 +23,28 @@ export class AirFaDirective implements OnInit {
   @Input() sharpThin: unknown;
   @Input() sharpDuotoneSolid: unknown;
 
-  protected types: { [key: AirFaType | string]: string } = {
-    "solid": "fa-solid",
-    "regular": "fa-regular",
-    "light": "fa-light",
-    "thin": "fa-thin",
-    "duotone": "fa-duotone",
-    "sharpSolid": "fa-sharp fa-solid",
-    "sharpRegular": "fa-sharp fa-regular",
-    "sharpLight": "fa-sharp fa-light",
-    "sharpThin": "fa-sharp fa-thin",
-    "sharpDuotoneSolid": "fa-sharp-duotone fa-solid",
-  };
+  @Input() animation: AirFaAnimation;
+  @Input() beat: unknown;
+  @Input() beatFade: unknown;
+  @Input() bounce: unknown;
+  @Input() fade: unknown;
+  @Input() flip: unknown;
+  @Input() shake: unknown;
+  @Input() spin: unknown;
+  @Input() spinReverse: unknown;
+  @Input() spinPulse: unknown;
 
-  constructor(
-    protected element: ElementRef,
-  ) {
+  constructor(protected element: ElementRef) {
   }
 
   ngOnInit(): void {
-    this.element?.nativeElement?.classList.add("fa");
-    this.element?.nativeElement?.classList.add("fa-" + this.icon);
+    const classes = [
+      "fa",
+      "fa-" + this.icon,
+      ...extractValue(this, AirFaTypes, "solid"),
+      ...extractValue(this, AirFaAnimations, this.animation),
+    ];
 
-    if (!this.type) {
-      Object.keys(this.types).forEach((type: AirFaType) => {
-        if (this[type] === "") {
-          this.element?.nativeElement?.classList.add(this.types[type]);
-        }
-      });
-    } else {
-      this.element?.nativeElement?.classList.add(this.types[this.type]);
-    }
+    classes.forEach((c) => this.element?.nativeElement?.classList.add(c));
   }
 }

@@ -1,0 +1,17 @@
+<button
+  #button
+  (click)="click()"
+  [class.br-pill]="isProp(rounded)"
+  [class.disabled]="isProp(disabled) || isProp(loading)"
+  [class.w-f]="isProp(block)"
+  [disabled]="isProp(disabled)"
+  [type]="submit ? 'submit' : 'button'"
+  class="btn btn-{{getColor()}} btn-{{getSize()}} {{classes}} "
+  role="button">
+  <div class="d-f jc-c ai-c gp-8">
+    <fa *ngIf="isProp(loading)" duotone icon="spinner-third" spin />
+    <fa *ngIf="!isProp(loading) && icon" [icon]="icon" />
+    <ng-content />
+    <ng-container>{{ text }}</ng-container>
+  </div>
+</button>

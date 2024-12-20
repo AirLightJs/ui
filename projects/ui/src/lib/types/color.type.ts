@@ -1,0 +1,30 @@
+export type AirColorType =
+  "primary" |
+  "secondary" |
+  "success" |
+  "info" |
+  "warning" |
+  "danger" |
+  "light" |
+  "dark" |
+  "blue" |
+  "indigo" |
+  "purple" |
+  "pink" |
+  "red" |
+  "orange" |
+  "yellow" |
+  "green" |
+  "teal" |
+  "cyan" |
+  "black" |
+  "white" |
+  "gray" |
+  "grayDark" |
+  "body" |
+  "level1" |
+  "level2" |
+  "level3" |
+  "level4" |
+  "level5" |
+  "level6";

@@ -1,4 +1,4 @@
-export type AirFaIcon = "0" |
+export type AirFaIconType = "0" |
   "1" |
   "2" |
   "3" |

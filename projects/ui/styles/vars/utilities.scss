@@ -39,8 +39,42 @@ $air-utility-aspect-ratios: (
 $air-utility-card-bg-color: var(--bs-body-bg) !default;
 $air-utility-card-color: var(--bs-body-color) !default;
 $air-utility-card-shadow: 0 0 var(--shadow-soft-blur) var(--shadow-soft-spread) var(--shadow-soft-color) !default;
-$air-utility-card-padding: 18px 20px !default;
+$air-utility-card-padding: 14px 16px !default;
 $air-utility-card-border-radius: 4px !default;
+
+$air-utility-card-sm-padding: 10px 10px !default;
+$air-utility-card-sm-border-radius: 4px !default;
+
+$air-utility-card-lg-padding: 18px 20px !default;
+$air-utility-card-lg-border-radius: 4px !default;
+
+$air-utility-msg-bg-color: var(--bs-body-bg) !default;
+$air-utility-msg-color: var(--bs-body-color) !default;
+$air-utility-msg-shadow: 0 0 var(--shadow-soft-blur) var(--shadow-soft-spread) var(--shadow-soft-color) !default;
+$air-utility-msg-padding: 0.5rem 0.75rem !default;
+$air-utility-msg-border-radius: 6px !default;
+
+$air-utility-msg-sm-padding: 0.3rem 0.55rem !default;
+$air-utility-msg-sm-border-radius: 6px !default;
+
+$air-utility-msg-lg-padding: 0.7rem 0.9rem !default;
+$air-utility-msg-lg-border-radius: 6px !default;
+
+$air-utility-tag-bg-color: var(--bs-body-bg) !default;
+$air-utility-tag-color: var(--bs-body-color) !default;
+$air-utility-tag-shadow: 0 0 var(--shadow-soft-blur) var(--shadow-soft-spread) var(--shadow-soft-color) !default;
+
+$air-utility-tag-padding: 0.2rem 0.35rem !default;
+$air-utility-tag-border-radius: 4px !default;
+$air-utility-tag-border-font-size: 14px !default;
+
+$air-utility-tag-sm-padding: 0.1rem 0.3rem !default;
+$air-utility-tag-sm-border-radius: 4px !default;
+$air-utility-tag-sm-border-font-size: 12px !default;
+
+$air-utility-tag-lg-padding: 0.25rem 0.4rem !default;
+$air-utility-tag-lg-border-radius: 4px !default;
+$air-utility-tag-lg-border-font-size: 16px !default;
 
 $air-utility-sc-bg-color: var(--bs-body-bg) !default;
 $air-utility-sc-color: var(--bs-body-color) !default;
@@ -71,6 +105,7 @@ $air-utility-blurs: (
 
 $air-utility-border-responsive: false !default;
 $air-utility-border-radius: (
+  pill: var(--bs-border-radius-pill),
   0: 0px,
   1: 1px,
   2: 2px,

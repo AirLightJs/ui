@@ -87,7 +87,7 @@ $level5DarkColor: $gray-100 !default;
 $level6DarkBg: $gray-750 !default;
 $level6DarkColor: $gray-100 !default;
 
-$theme-colors: map-merge($theme-colors, $colors) !default;
+$theme-colors: map-merge($theme-colors, $colors);
 
 $all-colors: map-merge($theme-colors, (
   'gray-25': #{$gray-25},
@@ -168,3 +168,4 @@ $special-colors: (
     "#{$name}-color": map-get($colors, 'color'),
   ));
 }
+

@@ -1,0 +1,9 @@
+<div [class.appear]="isProp(appear)" class="msg {{getColor()}} {{getSize()}}">
+  <div class="d-f gp-10">
+    <fa *ngIf="icon" [icon]="icon" />
+    <div>
+      <ng-container>{{ text }}</ng-container>
+      <ng-content />
+    </div>
+  </div>
+</div>

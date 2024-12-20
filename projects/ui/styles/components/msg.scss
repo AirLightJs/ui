@@ -1,0 +1,48 @@
+.msg {
+  padding: $air-utility-msg-padding;
+  border-radius: $air-utility-msg-border-radius;
+  box-shadow: $air-utility-msg-shadow;
+  background-color: $air-utility-msg-bg-color;
+  color: $air-utility-msg-color;
+  font-weight: 500;
+
+  &.sm {
+    padding: $air-utility-msg-sm-padding;
+    border-radius: $air-utility-msg-sm-border-radius;
+  }
+
+  &.lg {
+    padding: $air-utility-msg-lg-padding;
+    border-radius: $air-utility-msg-lg-border-radius;
+  }
+}
+
+@each $name, $colors in $special-colors {
+  .msg {
+    &.#{$name} {
+      background-color: map-get($colors, 'bg');
+      color: map-get($colors, 'color');
+    }
+
+    &.#{$name}-hover:hover {
+      background-color: map-get($colors, 'bg');
+      color: map-get($colors, 'color');
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .msg {
+    &.#{$color} {
+      color: var(--#{$prefix}#{$color}-text-emphasis);
+      background-color: shade-color($value, 50%);
+      border: 1px solid RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+    }
+
+    &.#{$color}-hover:hover {
+      color: var(--#{$prefix}#{$color}-text-emphasis);
+      background-color: shade-color($value, 50%);
+      border: 1px solid RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+    }
+  }
+}

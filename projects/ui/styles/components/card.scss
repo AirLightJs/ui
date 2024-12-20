@@ -1,30 +1,45 @@
-[class*="card"] {
+.card {
   padding: $air-utility-card-padding;
   border-radius: $air-utility-card-border-radius;
   box-shadow: $air-utility-card-shadow;
   background-color: $air-utility-card-bg-color;
   color: $air-utility-card-color;
+
+  &.sm {
+    padding: $air-utility-card-sm-padding;
+    border-radius: $air-utility-card-sm-border-radius;
+  }
+
+  &.lg {
+    padding: $air-utility-card-lg-padding;
+    border-radius: $air-utility-card-lg-border-radius;
+  }
 }
 
 @each $name, $colors in $special-colors {
-  .card-#{$name} {
-    background-color: map-get($colors, 'bg');
-    color: map-get($colors, 'color');
-  }
+  .card {
+    &.#{$name} {
+      background-color: map-get($colors, 'bg');
+      color: map-get($colors, 'color');
+    }
 
-  .card-#{$name}-hover {
-    background-color: map-get($colors, 'bg');
-    color: map-get($colors, 'color');
+    &.#{$name}-hover:hover {
+      background-color: map-get($colors, 'bg');
+      color: map-get($colors, 'color');
+    }
   }
 }
 
 @each $color, $value in $theme-colors {
-  .card-#{$color} {
-    color: color-contrast($value) if($enable-important-utilities, !important, null);
-    background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
-  }
-  .card-#{$color}-hover:hover {
-    color: color-contrast($value) if($enable-important-utilities, !important, null);
-    background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+  .card {
+    &.#{$color} {
+      color: color-contrast($value) if($enable-important-utilities, !important, null);
+      background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+    }
+
+    &.#{$color}-hover:hover {
+      color: color-contrast($value) if($enable-important-utilities, !important, null);
+      background-color: RGBA(var(--#{$prefix}#{$color}-rgb), var(--#{$prefix}bg-opacity, 1)) if($enable-important-utilities, !important, null);
+    }
   }
 }

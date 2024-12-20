@@ -1,0 +1,11 @@
+<div class="br-6 of-h sd-20">
+  <ng-content *ngIf="!items.length" />
+  <menuItem
+    (onClick)="click(item)"
+    *ngFor="let item of items"
+    [color]="getItemColor(item)"
+    [hoverColor]="getItemHoverColor(item)"
+    [iconType]="item.iconType"
+    [icon]="item.icon"
+    [text]="item.text"></menuItem>
+</div>

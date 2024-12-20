@@ -1,0 +1,5 @@
+<div (click)="onClick.emit()" class="d-f p-10 fs-14 fw-5 cs {{getColor()}} {{getHoverColor()}} of-h cp an-1">
+  <fa *ngIf="icon" [icon]="icon" [type]="iconType" classes="w-20" />
+  <div *ngIf="text" class="w-mc">{{ text }}</div>
+  <ng-content />
+</div>
